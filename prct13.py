@@ -1,0 +1,42 @@
+#!/usr/bin/python
+#!encoding: UTF-8
+
+import pylab as dibujo
+
+x = [0.00000001,0.0000001,0.000001,0.00001,0.0001]
+y1 = [28.57,100,100,100,100]
+y2 = [0,14.29,71.43,100,100]
+y3 = [0,0,28.57,100,100]
+y4 = [0,0,14.29,85.71,100]
+y5 = [0,0,0,14.29,71.43]
+y6 = [0,0,0,14.29,71.43]
+y7 = [0,0,0,0,28.57]
+
+
+p1 = dibujo.subplot(211)
+dibujo.title('Titulo del dibujo')
+
+
+dibujo.plot (x,y1,marker='o',linestyle=':',color='r',label='10')
+dibujo.plot(x,y2,marker='*',linestyle='--',color='b',label='50')
+dibujo.plot(x,y3,marker='p',linestyle='-.',color='y',label='100')
+dibujo.plot(x,y4,marker='s',linestyle=':',color='b',label='150')
+dibujo.plot(x,y5,marker='+',linestyle='--',color='g',label='500')
+dibujo.plot(x,y6,marker='^',linestyle='-.',color='m',label='550')
+dibujo.plot(x,y7,marker='o',linestyle='-',color='c',label='1000')
+
+dibujo.legend()
+dibujo.xlim(0,0.0001)
+dibujo.xticks(x)
+
+#p2 = dibujo.subplot(212)
+#dibujo.xlabel('Intervalos')
+#dibujo.ylabel('Tiempo en segundos')
+#dibujo.plot(x,y4,marker='+',linestyle='-',color='c',label='Linea4')
+
+
+#dibujo.legend()
+
+
+dibujo.show()
+
